@@ -87,3 +87,15 @@ crypto-attention-signal/
 └── tests/
     └── test_analysis_synthetic.py
 ```
+
+## Findings (live run)
+
+**Sample:** 722 daily observations (Bitcoin price + Crypto Fear & Greed Index), aligned over the overlapping window ending 2026-06-18.
+
+**Stationarity:** Log returns, realized volatility, and the daily change in the index are stationary (ADF p < 0.05). The sentiment *level* is non-stationary (p ≈ 0.26) — fear/greed regimes persist — so it was differenced before causality testing.
+
+**Contemporaneous correlation:** Rolling 30-day correlation between the index and next-day returns is weak and mildly negative (mean ≈ -0.17), exceeding |0.3| in only ~15% of windows and never |0.5|. No stable contemporaneous relationship.
+
+**Granger causality:** Sentiment to returns was significant at 0 of 7 lags. Returns to sentiment was significant at 7 of 7 lags. The relationship runs one way: price moves drive the sentiment index, not the reverse.
+
+**Takeaway:** The Fear & Greed Index does not appear to carry information that leads Bitcoin returns; it largely reflects price action that has already occurred. This is consistent with the index's construction (it embeds volatility and momentum components), which is why the lead-lag test matters more than contemporaneous correlation here.
