@@ -1,0 +1,7 @@
+yfinance>=0.2.40
+requests>=2.31
+vaderSentiment>=3.3
+pandas>=2.0
+numpy>=1.24
+statsmodels>=0.14
+scipy>=1.10
