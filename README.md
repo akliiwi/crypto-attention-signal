@@ -6,7 +6,7 @@ This project builds a daily dataset of Bitcoin returns/volatility and the Crypto
 
 ## Motivation
 
-There is a real academic literature on investor attention/sentiment and asset prices (e.g. Da, Engelberg & Gao, "In Search of Attention", 2011). The popular belief that retail sentiment predicts crypto moves is plausible but fragile when tested directly. This project tests it and reports what the data actually says, including null and reverse-direction results.
+There is an academic literature on investor attention/sentiment and asset prices (e.g. Da, Engelberg & Gao, "In Search of Attention", 2011) that I thought was interesting to look into (something I've also been curious about). The popular belief that retail sentiment predicts crypto moves is plausible but fragile when tested directly. This project tests it and reports what the data actually says, including null and reverse-direction results.
 
 ## What it does
 
